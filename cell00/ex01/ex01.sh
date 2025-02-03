@@ -1,13 +1,13 @@
 #Create a file called z that returns "Z", followed by a new line, whenever the command cat is used on it.
 
 # Create Z File
-touch Z
+touch z
 
 # Open Z File in vim and Write "z" in it
-vim Z
+vim z
 i 
-z
+Z
 :wq
 
 # cat Z to check if it returns "z"
-cat Z
+cat z
