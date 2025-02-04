@@ -6,11 +6,13 @@ touch argv.sh
 echo 'if [ $# -eq 0 ]; then
     echo "No arguments passed"
 elif [ $# -gt 3 ]; then
-    echo "Too many arguments passed"
+    echo "Too many arguments passed: ${@:1:3}"
 else
     echo "Arguments passed: $@"
-fi' > argv.sh
+fi
+ '> argv.sh
 
+chmod 777 argv.sh
 
 # texst the argv.sh file
 ./argv.sh
