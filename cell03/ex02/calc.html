@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Simple Calculator</h2>
+        <form id="calc-form">
+            <div class="input-group">
+                <label>First Value:</label>
+                <input type="text" name="atext">
+            </div>
+            <div class="input-group">
+                <label>Second Value:</label>
+                <input type="text" name="btext">
+            </div>
+            <div class="input-group">
+                <label>Operator:</label>
+                <select name="opchoice">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+            </div>
+            <button type="submit">Try me!</button>
+        </form>
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>
