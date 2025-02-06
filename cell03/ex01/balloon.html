@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+    <link rel="stylesheet" href="balloon.css">
+</head>
+
+<body>
+    <div style="text-align:center">
+        <span class="circle" id="Cir" onclick="Plus()" onmouseleave="reduceSize()"></span>
+        <p id="test">200</p>
+    </div>
+    <script>
+        let varri = 200;
+        let colors = ["red", "green", "blue"];
+        let colorIndex = 0;
+
+        function Plus() {
+            if (varri < 420) {
+                varri += 10;
+            } else {
+                varri = 200;
+                colorIndex = 0;
+            }
+            updateBalloon(true);
+        }
+
+        function reduceSize() {
+            if (varri > 200) {
+                varri -= 5;
+                colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+            }
+            updateBalloon(false);
+        }
+
+        function updateBalloon(increment) {
+            if (increment) {
+                colorIndex = (colorIndex + 1) % colors.length;
+            }
+            let balloon = document.getElementById("Cir");
+            balloon.style.height = varri + "px";
+            balloon.style.width = varri + "px";
+            balloon.style.backgroundColor = colors[colorIndex];
+            document.getElementById("test").innerHTML = varri;
+        }
+    </script>
+</body>
+
+</html>
