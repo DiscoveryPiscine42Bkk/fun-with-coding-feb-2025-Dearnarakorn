@@ -1,4 +1,3 @@
-/** @type {HTMLFormElement} */
 const inp = document.getElementById('calc-form');
 
 const {
