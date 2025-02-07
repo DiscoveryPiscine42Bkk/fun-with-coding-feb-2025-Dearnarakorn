@@ -1,0 +1,27 @@
+body {
+    font-family: system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid black;
+}
+
+/* Section Styling */
+section {
+    padding: 80px 0;
+}
+
+/* Navbar Styling */
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: yellow;
+}
